@@ -1,0 +1,462 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+img
+	max-width: 100%
+*
+	outline: none
+a:focus
+	outline: none
+	text-decoration: none
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.4
+	overflow-x: hidden
+	font-family: $default-font
+	background-color: rgb(34, 138, 139)
+	color: $main-color
+	opacity: 1
+	padding-top: 10px
+
+.container
+	max-width: 1170px 
+
+.block-theme
+	background-color: rgba(255, 255, 255, 0.70)
+	border-radius: 5px
+	box-shadow: 0 0 10px rgba(74, 74, 74, 0.71)
+
+
+// header
+.header
+	padding-bottom: 40px
+	border-radius: 5px
+	// background-color: rgba(26, 188, 156, 0.6)
+	background-image: url('../img/hbg2.jpg')
+	background-repeat: no-repeat
+	background-position: center
+	box-shadow: 0 0 10px rgba(74, 74, 74, 0.71)
+	
+	&__title
+		color: #fff
+		font-size: 22px
+		font-weight: 400
+		margin: 0
+	&__text-info
+		color: #fff
+		font-size: 15px
+		font-weight: 400
+		margin: 5px 0
+		text-align: left
+
+.header-top	
+	padding-top: 20px
+	padding-right: 20px
+	padding-left: 30px
+	&__wrap, &__logo
+		display: flex
+		align-items: center
+		justify-content: space-between
+	&__logo
+		
+.page-logo
+	p
+		margin: 0
+		font-size: 33px
+		font-weight: 700
+		color: #fff
+		span
+			color: #8affff
+	> span
+		font-size: 12px
+		font-weight: 400
+		align-self: flex-start
+		color: #fff
+
+.nav-menu
+	&__link-btn
+		margin: 0 20px 0
+
+.link-btn
+	font-size: 13px
+	font-weight: 700
+	color: $main-color
+	text-transform: uppercase
+	transition: all .2s
+	&:hover, &:focus
+		color: #fff
+		text-decoration: none
+
+.header-bottom
+	padding-left: 30px
+	@media(max-width: 767px)
+		padding-left: 0
+	&__wrap
+		display: flex
+		align-items: center
+		justify-content: space-between
+		@media(max-width: 767px)
+			flex-direction: column
+			margin-top: 20px
+	&__content
+		padding: 10px
+		border-radius: 5px
+		background-color: rgba(0, 0, 0, 0.25)
+		@media(max-width: 767px)
+			background-color: rgba(0, 0, 0, 0.40)
+	&__links
+		@media(max-width: 767px)
+			margin-top: 15px
+
+.links-contact
+	background-color: rgba(183, 193, 208, 0.56)
+	position: relative
+	padding: 15px
+	&__title
+		font-size: 18px
+		font-weight: 400
+		text-transform: uppercase
+		color: #fff
+	&__list
+		list-style: none
+		padding: 0
+		margin-bottom: 0
+	&__list-item
+		display: inline-block
+		margin-right: 8px
+
+.header-image
+	width: 150px
+	height: 150px
+	display: flex
+	margin: 0 auto
+	background-color: #FFF
+	border-radius: 50%
+	img
+		margin: auto
+	@media(max-width: 767px)
+		margin-top: 25px
+
+
+// burger - menu
+.burger-button
+	@media(min-width: 768px)
+		display: none
+
+.nav-menu
+	@media(max-width: 767px)
+		display: none
+// end - burger - menu
+
+// end - header
+
+// main
+main
+	padding-top: 10px
+	text-align: center
+
+// skills-section
+.skills-section
+	padding: 20px
+	&__wrap
+		display: flex
+		justify-content: space-between
+		padding-top: 20px
+	&__list
+		margin: 0
+		margin-top: 25px
+	&__image
+		max-width: 50%
+		width: 100%
+		height: 400px
+		object-fit: cover
+		margin-left: 15px
+		@media(max-width: 767px)
+			display: none
+		@media(max-width: 1200px)
+			max-width: 40%
+.skills-list
+	padding: 0
+	list-style: none
+	text-align: left
+	&__item
+		position: relative
+		padding-left: 40px
+		font-size: 14px
+		margin: 10px 0
+		&:before
+			content: ''
+			position: absolute
+			left: 0
+			top: 50%
+			transform: translateY(-50%)
+			width: 20px
+			height: 20px
+			background-image: url('../img/checkmark.png')
+			background-repeat: no-repeat
+// end - skills-section
+
+// works-section	
+.works-section
+	margin-top: 20px
+	margin-bottom: 20px
+	padding-top: 20px
+	&__title
+		font-size: 18px
+		font-weight: 700
+		margin: 0
+
+.wrap-grids
+	margin-top: 25px
+	display: flex
+	align-items: center
+	justify-content: center
+	flex-wrap: wrap
+	@media(max-width: 991px)
+		justify-content: space-around
+	&__item 
+		margin-left: 7px
+		margin-right: 7px
+		margin-bottom: 25px
+		@media(max-width: 991px)
+			margin-bottom: 15px
+
+.item-works
+	max-width: 260px
+	text-align: center
+	position: relative
+	cursor: pointer
+	&:hover
+		.overlay-link
+			opacity: 1
+			transition: all .2s
+		.item-works__img img
+			transform: scale(1.2)
+			transition: all 500ms
+		.item-works__title
+			transition: all .2s
+			color: #2b2b2b
+
+	&__img
+		transition: all 500ms
+		position: relative
+		max-width: 260px
+		overflow: hidden
+		img
+			transition: all 500ms
+
+	&__wrap
+		position: relative
+		max-width: 260px
+	&__overlay
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+	&__title
+		font-size: 15px
+		font-weight: 400
+		transition: all .2s
+
+.overlay-link
+	opacity: 0
+	display: flex
+	align-items: center
+	justify-content: center
+	transition: all .2s
+	width: 90%
+	height: 90%
+	background-color: rgba(0, 88, 97, 0.80)
+	&__link
+		width: 40px
+		height: 40px
+		margin: 0 10px
+		border-radius: 50%
+		background-color: rgba(255, 255, 255, 0.34)
+		background-repeat: no-repeat
+		background-position: center
+		transition: all .2s
+		&:hover
+			background-color: rgba(255, 255, 255, 0.50)
+			transition: all .2s
+	&__preview-link
+		background-image: url('../img/look-icon.png')
+		@media(max-width: 991px)
+			display: none
+	&__open-link
+		background-image: url('../img/link.png')
+// end - works-section
+
+// footer
+.footer-page
+	padding-top: 30px
+	padding-right: 20px
+	padding-left: 20px
+	padding-bottom: 20px
+	margin-bottom: 20px
+	&__info
+		// max-width: 265px
+	&__text
+		font-size: 13px
+		font-weight: 400
+	&__link
+		margin-left: 5px
+		color: $main-color
+		transition: all 300ms
+		&:hover, &:focus
+			color: #2b2b2b
+			text-decoration: none
+
+.footer-title
+	font-size: 16px
+	font-weight: 700
+	text-transform: uppercase
+
+.footer-wrap
+	display: flex
+	justify-content: space-between
+	@media(max-width: 580px)
+		flex-direction: column
+	&__form
+		display: none
+
+
+.form-feedback
+	max-width: 600px
+	width: 100%
+	@media(max-width: 991px)
+		max-width: 370px
+	&__wrap
+		display: flex
+		flex-wrap: no-wrap
+		margin-top: 18px
+		justify-content: space-between
+		width: 100%
+	&__fields
+		display: flex
+		flex-wrap: wrap
+		width: 100%
+		justify-content: space-between
+
+// inputs
+.input-theme
+	width: 48%
+	height: 35px
+	padding: 0 15px
+	border: 1px dashed $main-color
+.input-theme, .textarea-theme
+	color: #000
+	font-size: 14px
+	background-color: rgba(255, 255, 255, 0.10)
+	&::-webkit-input-placeholder
+		color: $main-color
+		font-size: 13px
+		transition: all 0.3s ease
+	&::-moz-placeholder
+		color: $main-color /* Firefox 19+ */
+		font-size: 13px
+		transition: all 0.3s ease
+	&:-ms-input-placeholder
+		color: $main-color
+		font-size: 13px
+		transition: all 0.3s ease
+	&:focus::-webkit-input-placeholder
+		opacity: 0
+		transition: all 0.3s ease
+	&:focus::-moz-placeholder
+		opacity: 0
+		transition: all 0.3s ease
+	&:focus:-ms-input-placeholder
+		opacity: 0
+		transition: all 0.3s ease
+	&:focus
+		border-style: solid
+	&:hover
+		border-style: solid
+
+.textarea-theme
+	max-width: 600px
+	width: 100%
+	height: 120px
+	margin-top: 15px
+	padding: 15px
+	border: 1px dashed $main-color
+	resize: none
+	overflow: hidden
+
+.button-theme
+	width: 35px
+	height: 170px
+	margin-left: 10px
+	padding: 10px
+	word-wrap: break-word
+	background-color: rgba(255, 255, 255, 0.10)
+	border: 1px dashed $main-color
+	font-weight: 300
+	transition: all 200ms
+	&:hover
+		border-style: solid
+		background-color: rgba(255, 255, 255, 0.2)
+// end - inputs
+// 
+.frame-wrap
+	position: fixed
+	top: 0
+	width: 100%
+	height: 100%
+	background-color: rgba(0, 0, 0, 0.49)
+	display: none
+	z-index: 5
+	.myframe
+		display: none
+		position: absolute
+		top: 50px
+		z-index: 10
+		left: 50%
+		transform: translateX(-50%)
+		width: 1000px
+		height: 600px
+		@media(max-width: 1200px)
+		  max-width: 900px
+
+.close-frame
+	position: absolute
+	top: 0
+	right: 0
+	width: 24px
+	height: 24px
+	border: none
+	background-color: #3db39e
+	background-image: url('../img/close-v2.png')
+	background-size: 70%
+	background-repeat: no-repeat
+	background-position: center
+.hidden-y
+	overflow-y: hidden
+@import "media" // Всегда в конце

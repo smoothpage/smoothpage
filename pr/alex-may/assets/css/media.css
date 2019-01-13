@@ -1,0 +1,241 @@
+@media (max-width: 1200px) {
+	.header {
+		min-height: 102px;
+	}
+	.header ul {
+		float: right;
+		list-style: none;
+		margin-right: 20px;
+	}
+	.tel {
+		font-size: 20px;
+		display: block;
+		margin-top: 22px
+	}
+	.block_footer_logo a img {
+		margin-left: 0;
+	}
+
+	img.warning_ico {
+		display: block;
+		position: static;
+		margin: 5px auto;
+	}
+
+	.block_footer_logo p {
+		margin-left: 0;
+		margin-top: 0;
+	}
+
+	.block_footer_link p {
+		margin-right: 0;
+		padding-left: 12px;
+	}
+
+	.date_other a button {
+		width: 220px;
+	}
+
+	.date_enroll a button {
+		width: 220px;
+	}
+	.group_price {
+		padding-top: 30px;
+	}
+	.money_price h3 {
+		margin-top: 35px;
+	}
+	.eTimer {
+		padding: 0 !important;
+	}
+	
+	.eTimer .etTitle{
+		margin-top: 35px;
+	}
+	.banner h1{
+		font-size: 53px;
+	}
+	.logo {
+		margin-left: 0;
+	}
+}
+
+
+@media (max-width: 991px) {
+	.header {
+		min-height: 80px;
+	}
+	.tel {
+		font-size: 14px;
+		margin-top: 14px;
+	}
+
+	.tel img {
+		margin-right: 10px;
+	}
+	.mailto {
+		font-size: 14px;
+	}
+
+	.banner {
+		height: 0;
+	}
+	.banner img {
+		margin-top: 18px;
+	}
+
+	.banner h1 {
+		font-size: 41px;
+	}
+
+	.main_info {
+		margin-top: 25px;
+	}
+
+	.main_text {
+		margin-top: 17px;
+		margin-bottom: 17px;
+	}
+
+	.main_text p {
+		font-size: 15px;
+	}
+
+	.date h2 {
+		margin-top: 25px;
+	}
+
+	.date p {
+		font-size: 16px;
+	}
+
+	.date a {
+		font-size: 19px;
+	}
+
+	.date_other a {
+		font-size: 19px;
+	}
+	
+	.date_other a button{
+		width: 160px;
+		height: 40px;
+	}
+	
+	.date_enroll a button {
+		width: 160px;
+		height: 40px;
+	}
+	.money_price h2 {
+		font-size: 19px;
+	}
+	.money_price h3 {
+		font-size: 37px;
+		margin-top: 50px;
+	}
+	.money_price p {
+		font-size: 16px;
+	}
+	.group_price a button {
+		font-size: 17px;
+		width: 150px;
+		height: 40px;
+	}
+	.eTimer .etTitle {
+		margin-top: 17px;
+	}
+	.block_footer_link a {
+		font-size: 12px;
+	}
+}
+
+
+
+@media (max-width: 768px) {
+	.header a {
+		margin-left: 0;
+	}
+	.tel {
+		font-size: 14px;
+		margin-top: 14px;
+		margin-right: 26px
+	}
+	.header ul {
+		margin-right: 19px;
+		margin-top: 0;
+	}
+	.mailto {
+		font-size: 13px;
+	}
+	.banner h1 {
+		font-size: 39px;
+		margin-right: 0;
+	}
+	.logo {
+		top: 8px;
+	}
+	.banner{
+		height: auto;
+		min-height: auto
+	}
+}
+
+
+@media (max-width: 513px) {
+	.thead-inverse th {
+		font-size: 9px;
+	}
+	.color {
+		font-size: 13px;
+	}
+	.table tbody tr td {
+		font-size: 10px;
+	}
+	.table button {
+		width: 73px;
+		height: 22px;
+		font-size: 11px;
+	}
+	.block_table h2, h3 {
+		font-size: 25px;
+	}
+	.driving_direct h2 {
+		font-size: 25px;
+	}
+	.banner h1 {
+		font-size: 24px;
+	}
+
+	.logo {
+		position: inherit;
+		top: 0;
+	}
+	.header a. {
+		margin-left: 0;
+	}
+
+	.logo img {
+		margin-bottom: -17px;
+	}
+
+	.main_img {
+		margin-top: 0;
+	}
+
+	.date_other a button {
+		margin-bottom: 10px;
+	}
+	.date_button {
+		margin-top: 10px;
+		margin-bottom: 20px;
+	}
+
+	.block_footer_logo a img {
+		margin: 15px auto;
+	}
+
+	img.warning_ico {
+		margin: 15px auto;
+	}
+
+}

@@ -1,0 +1,178 @@
+@import "vars"
+
+.header
+	position: relative
+	@media(max-width: 991px)
+		background-color: $c-orange
+	&__wrap
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding-top: 40px
+		padding-bottom: 30px
+		@media(max-width: 1200px)
+		  padding-top: 20px
+		  padding-bottom: 15px
+		@media(max-width: 991px)
+			padding: 10px 0
+	
+	&__contacts
+		max-width: 345px
+		width: 100%
+		@media(max-width: 1200px)
+			max-width: 320px
+		@media(max-width: 767px)
+			flex-direction: column-reverse
+			align-items: center
+			margin: 0 auto
+			margin-top: 10px
+			padding-top: 5px
+			position: relative
+			display: none
+			&:before
+				content: ''
+				position: absolute
+				top: 0
+				left: calc(50% - 85px)
+				display: block
+				max-width: 170px
+				width: 100%
+				height: 2px
+				background-color: $c-orange
+	
+.contacts-b
+	display: flex
+	align-items: center
+	&__col
+		display: flex
+		flex-direction: column
+		width: 100%
+		margin-left: 30px
+		text-align: right
+	&__link-tel, &__w-time
+		color: $c-000
+		font-size: 16px
+		font-weight: 700
+		text-transform: uppercase
+	&__link-tel
+		&:hover, &:focus
+			text-decoration: none
+			color: $c-000
+
+.header__right
+	max-width: 375px
+	justify-content: space-between
+	width: 100%
+	display: flex
+	@media(max-width: 767px)
+		max-width: 40px
+	.contacts-b
+		@media(max-width: 767px)
+			display: none
+		&__col
+			@media(max-width: 767px)
+				text-align: center
+				margin: 0
+
+.main-menu
+	width: 100%
+	max-width: 467px
+	width: 100%
+	transition: all .4s
+	@media(max-width: 1200px)
+	  max-width: 400px
+	@media(max-width: 991px)
+		padding-top: 10px
+		max-width: 100%
+		padding-bottom: 15px
+		position: absolute
+		top: 100%
+		left: -100%
+		transform: translateX(-50%)
+		background-color: $c-fff
+	@media(max-width: 991px)
+		border-bottom: 4px solid $c-orange
+	&__list
+		display: flex
+		justify-content: space-between
+		list-style: none
+		padding: 0
+		margin: 0
+		@media(max-width: 991px)
+			flex-direction: column
+			align-items: center
+	&__list-item
+	&__link
+		position: relative
+		font-size: 16px
+		font-weight: 700
+		color: $c-000
+		@media(max-width: 1200px)
+		  font-size: 14px
+		&:before
+				content: ''
+				position: absolute
+				bottom: -2px
+				left: 50%
+				transform: translateX(-50%)
+				display: block
+				width: 0
+				height: 1px
+				background-color: $c-000
+				opacity: 0
+				transition: all .2s
+		&:hover, &:focus
+			color: $c-000
+			text-decoration: none
+		&:hover
+			&:before
+				opacity: 1
+				width: 100%
+				transition: all .2s
+	
+	.contacts-b
+		&__col
+			margin: 0 auto
+			text-align: center
+		&__button
+			margin-top: 10px
+	.header__contact
+		display: block
+// mobile-menu
+.header.push-wrap
+	.main-menu
+		left: 50%
+		transition: all .4s
+// end - mobile-menu
+
+// burger-b
+.burger-b
+	position: relative
+	display: none
+	width: 40px
+	height: 40px
+	background-color: $c-green
+	border: 0
+	padding: 0
+	transition: all .2s
+	@media(max-width: 991px)
+		display: block
+	&__line
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+		display: block
+		width: 80%
+		height: 5px
+		background-color: $c-fff
+		&-first
+			top: 5px
+		&-second
+			top: calc(50% - 2.5px)
+		&-last
+			bottom: 5px
+.header.push-wrap
+	.burger-b
+		transform: rotate(90deg)
+		transition: all .2s
+// end - burger-b

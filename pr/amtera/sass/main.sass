@@ -1,0 +1,911 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+
+img
+	max-width: 100%
+
+html, body
+	overflow-x: hidden
+body
+	font-size: 22px
+	min-width: 320px
+	position: relative
+	line-height: 1.4
+	color: $c-000
+	font-family: $default-font
+	background-color: #fff
+	opacity: 1
+
+@import "header"
+@import "buttons"
+@import "global"
+
+.main-board
+	padding-top: 40px
+	padding-bottom: 205px
+	background-image: url('../img/paints-bg.jpg')
+	background-position: center bottom
+	background-repeat: no-repeat
+	@media(max-width: 991px)
+		padding-top: 30px
+		padding-bottom: 150px
+	&__image-wrap
+		@media(max-width: 767px)
+			display: none
+	&__wrap
+		display: flex
+		align-items: center
+	&__content
+		max-width: 600px
+		width: 100%
+		@media(max-width: 991px)
+			max-width: 355px
+	&__sub-title
+		display: block
+		max-width: 515px
+		font-size: 30px
+		font-weight: 400
+		@media(max-width: 991px)
+			font-size: 20px
+
+.main-title
+	display: flex
+	flex-direction: column
+	align-items: center
+	font-family: $roboto
+	font-weight: 700
+	margin: 0
+	&__large
+		font-size: 160px
+		@media(max-width: 991px)
+			font-size: 80px
+		&--min
+			font-size: 124px
+			@media(max-width: 991px)
+				font-size: 62px
+	&__small
+		font-size: 58px
+		margin-bottom: -108px
+		@media(max-width: 991px)
+			font-size: 29px
+			margin-bottom: -54px
+
+.form-feedback
+	&__inner
+		margin-top: 55px
+		display: flex
+		justify-content: space-between
+		@media(max-width: 991px)
+			flex-wrap: wrap
+	&__input
+		@media(max-width: 767px)
+			max-width: 100%
+			&:not(:first-child)
+				margin-top: 10px
+	&__button
+		@media(max-width: 991px)
+			margin: 0 auto
+			margin-top: 10px
+			max-width: 100%
+
+
+// shares-b
+.shares-b
+	background-color: $c-blue
+	&__wrap
+		padding-top: 25px
+		padding-bottom: 30px
+		@media(max-width: 767px)
+			padding-bottom: 20px
+
+.slider-shares
+	max-width: 1169px
+	width: 100%
+	&__item
+		background-image: url('../img/business-cards.jpg')
+		background-size: cover
+		box-shadow: 0 0 9px rgba(30, 15, 0, 0.89)
+	&__title
+		margin: 0
+		display: block
+		color: $c-fff
+		max-width: 328px
+		font-size: 42px
+		font-weight: 700
+		@media(max-width: 767px)
+			font-size: 21px
+		&--gift
+			position: relative
+			padding-right: 125px
+			text-align: right
+			@media(max-width: 767px)
+				padding-right: 0
+				padding-left: 20px
+				text-align: left
+			&:before
+				content: ''
+				position: absolute
+				top: calc(50% - 70px)
+				right: -35px
+				width: 157px
+				height: 141px
+				background-image: url('../img/gift-box.png')
+				@media(max-width: 767px)
+					top: calc(50% - 50px)
+					right: 65px
+					width: 110px
+					height: 100px
+					background-size: cover
+				@media(max-width: 380px)
+					width: 70px
+					height: 60px
+					top: calc(50% - 30px)
+					right: 45px
+
+		&--ttu
+			display: block
+			text-transform: uppercase
+		&--fz60
+			font-size: 60px
+			@media(max-width: 767px)
+				font-size: 30px
+	&__overlay
+		padding-left: 120px
+		padding-top: 110px
+		padding-bottom: 40px
+		font-size: 42px
+		max-width: 503px
+		background-color: rgba(0, 0, 0, 0.67)
+		position: relative
+		@media(max-width: 767px)
+			padding-top: 120px
+			padding-left: 65px
+		&:before, &:after
+			content: ''
+			position: absolute
+			width: 38px
+			height: 38px
+			background-image: url('../img/dec-cross.png')
+		&:before
+			top: 40px
+			right: 45px
+		&:after
+			left: 45px
+			bottom: 35px
+	&__button
+		margin-top: 10px
+		margin-left: 150px
+		@media(max-width: 767px)
+			margin-left: 75px
+			margin-top: 20px
+		@media(max-width: 380px)
+			max-width: 170px
+			margin-left: 40px
+
+	&__gift-line
+		position: absolute
+		top: 0
+		left: 0
+
+// slick
+.slick-arrow
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+	width: 41px
+	height: 41px
+	font-size: 0
+	background-image: url('../img/slider-arrow.png')
+	background-repeat: no-repeat
+	background-size: cover
+	background-color: transparent
+	border: 0
+	z-index: 10
+	@media(max-width: 767px)
+		width: 30px
+		height: 30px
+	&:focus
+		outline: none
+.slick-prev
+	left: 15px
+	@media(max-width: 380px)
+		left: 10px
+		
+.slick-next
+	right: 15px
+	transform: translateY(-50%) rotate(180deg)
+	@media(max-width: 380px)
+		right: 10px
+
+
+.slick-dots
+	display: flex
+	justify-content: space-between
+	list-style: none
+	padding: 0
+	margin: 0
+	margin-top: 25px
+	@media(max-width: 767px)
+		margin-top: 15px
+	li
+		width: 31.14%
+		font-size: 0
+		@media(max-width: 991px)
+			height: 10px
+	button
+		width: 100%
+		height: 15px
+		font-size: 0
+		background-color: #9a9995
+		border: 0
+		@media(max-width: 991px)
+			height: 10px
+	.slick-active
+		button
+			background-color: #f2b704
+			&:focus
+				outline: none
+// end - slick
+// end - shares-b
+
+// company-b
+.company-b
+	padding-top: 50px
+	@media(max-width: 991px)
+		padding-top: 25px
+	&__block-title
+		text-align: center
+		margin: 0
+	&__row
+		max-width: 1030px
+		margin: 0 auto
+		position: relative
+		padding-top: 40px
+		display: flex
+		justify-content: space-between
+		@media(max-width: 767px)
+			flex-direction: column
+			align-items: center
+			padding-top: 20px
+		&:before
+			content: ''
+			position: absolute
+			right: -200px
+			bottom: -177px
+			display: block
+			width: 304px
+			height: 304px
+			background-image: url('../img/circle-blue.png')
+			background-size: cover
+			@media(max-width: 991px)
+				width: 120px
+				height: 120px
+				right: -100px
+				bottom: -85px
+	&__image-wrap
+		max-width: 940px
+		width: 100%
+		@media(max-width: 767px)
+			width: 50%
+	&__image-t
+		position: absolute
+		top: 180px
+		left: -545px
+		max-width: 940px
+		width: 100%
+		@media(max-width: 991px)
+			max-width: 350px
+			left: 0
+		@media(max-width: 767px)
+			display: none
+	&__info
+		max-width: 530px
+		width: 100%
+		padding-top: 65px
+		@media(max-width: 767px)
+			padding-top: 30px
+	&__text
+		display: block
+		padding-left: 147px
+		position: relative
+		font-size: 24px
+		box-sizing: content-box
+		@media(max-width: 991px)
+			font-size: 16px
+			padding-left: 70px
+		@media(max-width: 380px)
+			padding-left: 50px
+			font-size: 14px
+		&--maw215
+			max-width: 230px
+		&:last-child
+			margin-top: 70px
+			@media(max-width: 767px)
+				margin-top: 40px
+		&:before
+			content: ''
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			left: 0
+			width: 78px
+			height: 78px
+			background-image: url('../img/tick.png')
+			background-size: cover
+			@media(max-width: 991px)
+				width: 37px
+				height: 37px
+// end - company-b
+
+// prices-b
+.prices-b
+	padding-top: 150px
+	@media(max-width: 991px)
+		padding-top: 75px
+	&__wrap
+		display: flex
+		flex-direction: column
+		align-items: center
+		padding-top: 50px
+	&__block-title
+		text-align: center
+	&__price-item
+		&:not(:first-child)
+			margin-top: 70px
+
+// price-item
+.price-item
+	width: 100%
+	max-width: 970px
+	display: flex
+	flex-direction: column
+	position: relative
+	padding-right: 75px
+	box-sizing: content-box
+	@media(max-width: 1200px)
+		max-width: 880px
+		padding-right: 60px
+	@media(max-width: 991px)
+		padding-left: 10px
+		padding-right: 10px
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		right: 0
+		display: block
+		width: 18px
+		height: 72px
+		background-size: cover
+		@media(max-width: 991px)
+			right: 25px
+	&:first-child
+		&:before
+			background-image: url('../img/dots-item.png')
+	&:nth-child(2)
+		&:before
+			background-image: url('../img/dots-item-2.png')
+	&:last-child
+		&:before
+			background-image: url('../img/dots-item-3.png')
+	&__title
+		font-size: 30px
+		font-weight: 700
+		margin: 0
+		@media(max-width: 1200px)
+			font-size: 26px
+		@media(max-width: 991px)
+			font-size: 22px
+		@media(max-width: 767px)
+			max-width: 380px
+
+	&__info, &__title
+		@media(max-width: 991px)
+			padding-left: 15px
+
+
+	&__info
+		margin-top: 10px
+		margin: 0
+		font-size: 26px
+		font-weight: 400
+		color: #4da4d3
+		@media(max-width: 1200px)
+			font-size: 24px
+		@media(max-width: 991px)
+			max-width: 650px
+			font-size: 18px
+		@media(max-width: 767px)
+			max-width: 370px
+			margin-top: 20px
+			
+	&__table-wrap
+		@media(max-width: 991px)
+			overflow-x: scroll
+			padding-left: 15px
+	&__table
+		margin-top: 40px
+		@media(max-width: 991px)
+			margin-top: 20px
+	&__btn
+		margin-top: 30px
+		align-self: flex-end
+		@media(max-width: 991px)
+			align-self: center
+// end - price-item
+// price-table
+.price-table
+	width: 970px
+	color: $c-000
+	@media(max-width: 1200px)
+		width: 870px
+
+	&__thead
+		.price-table__row
+			padding-right: 215px
+			justify-content: space-between
+			.price-table__col
+				font-size: 22px
+				font-weight: 700
+				&:nth-child(2)
+					margin-left: -200px
+					@media(max-width: 1200px)
+						margin-left: -80px
+	&__tbody
+		padding-top: 20px
+		.price-table__row
+			justify-content: space-between
+			&:first-child
+				.price-table__col
+					font-size: 20px
+					@media(max-width: 991px)
+						font-size: 18px
+				.price-table__data-wrap
+					padding-left: 200px
+					@media(max-width: 1200px)
+						padding-left: 175px
+					@media(max-width: 991px)
+						padding-left: 170px
+			&:not(:first-child)
+				> .price-table__col
+						&:first-child
+							font-size: 20px
+							font-weight: 700
+							@media(max-width: 991px)
+								font-size: 18px
+		.price-table__col
+			padding: 10px 0
+	&__row
+		display: flex
+		&--top
+			padding-right: 50px
+			max-width: 810px
+	&__data-wrap
+		width: 100%
+		max-width: 810px
+		display: flex
+		align-items: center
+		padding-left: 25px
+		padding-right: 45px
+		justify-content: space-between
+		@media(max-width: 1200px)
+			max-width: 700px
+		&--dark
+			background-color: $c-blue
+			color: $c-fff
+		.price-table__col
+			min-width: 46px
+			font-size: 18px
+			font-weight: 400
+			@media(max-width: 991px)
+				font-size: 16px
+
+// price-item--type2
+.price-item
+	&--type2
+		.price-item__btn
+			margin-top: 0
+			@media(max-width: 991px)
+				margin-top: 20px
+.price-table
+	&--type2
+		.price-table__data-wrap
+			max-width: 770px
+			justify-content: normal
+			padding-left: 135px
+			@media(max-width: 1200px)
+				max-width: 630px
+				padding-left: 90px
+		.price-table__thead
+			.price-table__row
+				max-width: 480px
+				padding: 0
+				@media(max-width: 767px)
+					max-width: 500px
+		.price-table__tbody
+			padding-top: 5px
+			.price-table__row
+				&:not(:first-child)
+					margin-bottom: 45px
+					@media(max-width: 767px)
+						margin-bottom: 25px
+				&:first-child
+					.price-table__data-wrap
+						padding-left: 135px
+						@media(max-width: 1200px)
+							padding-left: 90px
+				&:last-child
+					@media(max-width: 991px)
+						margin-bottom: 0
+
+	&__col--gift
+		position: relative
+		font-size: 20px !important
+		padding-right: 135px !important
+		margin-left: 45px
+		&:before
+			content: ''
+			position: absolute
+			right: 0
+			top: -38px
+			width: 108px
+			height: 94px
+			background-image: url('../img/gift-box.png')
+			background-repeat: no-repeat
+			background-size: contain
+			@media(max-width: 767px)
+				width: 80px
+				height: 66px
+				top: -15px
+// end - price-item--type2
+// end - price-table
+// end - prices-b
+
+// advantages-b
+.advantages-b
+	margin-top: 60px
+	padding-top: 50px
+	padding-bottom: 70px
+	background-color: $c-blue
+	@media(max-width: 767px)
+		padding-top: 25px
+		padding-bottom: 35px
+	&__top
+		display: flex
+		justify-content: space-between
+		@media(max-width: 767px)
+			flex-direction: column
+			align-items: center
+	&__block-title
+		max-width: 400px
+		text-transform: none
+		@media(max-width: 767px)
+			text-align: center
+	&__button
+		@media(max-width: 767px)
+			margin-top: 20px
+	&__list
+		padding-top: 50px
+		@media(max-width: 767px)
+			padding-top: 20px
+// advantages-list
+.advantages-list
+	max-width: 915px
+	margin: 0 auto
+	padding-left: 0
+	display: flex
+	justify-content: space-between
+	list-style: none
+	@media(max-width: 767px)
+		flex-wrap: wrap
+		justify-content: space-around
+	&__item
+		max-width: 130px
+		display: flex
+		flex-direction: column
+		align-items: center
+		@media(max-width: 767px)
+			max-width: 150px
+			width: 100%
+			margin-top: 30px
+		&-number
+			font-size: 32px
+			font-weight: 700
+			text-transform: uppercase
+			color: $c-fff
+			font-family: $roboto
+			@media(max-width: 991px)
+				font-size: 24px
+		&-image
+			@media(max-width: 991px)
+				width: 80%
+			@media(max-width: 767px)
+				width: 70%
+		&-title
+			display: block
+			margin-top: 45px
+			font-size: 24px
+			font-weight: 400
+			line-height: 30px
+			color: $c-fff
+			text-align: center
+			@media(max-width: 991px)
+				font-size: 20px
+				margin-top: 30px
+			@media(max-width: 767px)
+				margin-top: 15px
+	&__image-wrap
+		min-height: 100px
+		margin-top: 55px
+		@media(max-width: 991px)
+			margin-top: 45px
+		@media(max-width: 767px)
+			margin-top: 25px
+			min-height: 80px
+			text-align: center
+
+			
+// end - advantages-list
+// end - advantages-b
+
+// quality-b
+.quality-b
+	padding-top: 70px
+	@media(max-width: 991px)
+		padding-top: 90px
+	@media(max-width: 767px)
+		padding-top: 50px
+	&__block-title
+		@media(max-width: 767px)
+			text-align: center
+			padding: 0 40px
+		@media(max-width: 380px)
+			padding: 0 5px
+			margin-top: 10px
+	&__wrap
+		position: relative
+		display: flex
+		flex-direction: column
+		align-items: center
+		&:before
+			content: ''
+			position: absolute
+			top: -180px
+			left: -230px
+			width: 363px
+			height: 352px
+			background-image: url('../img/circle-yellow.png')
+			background-size: cover
+			@media(max-width: 1200px)
+			  width: 140px
+			  height: 135px
+			  top: -130px
+			  left: -60px
+			@media(max-width: 767px)
+				top: -125px
+				left: -80px
+		&:after
+			content: ''
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			right: -300px
+			width: 360px
+			height: 350px
+			background-image: url('../img/circle-pink.png')
+			background-size: cover
+			@media(max-width: 1200px)
+			  right: -270px
+			@media(max-width: 767px)
+				display: none
+	&__list
+		margin: 0
+		margin-top: 50px
+
+// quality-list
+.quality-list
+	position: relative
+	display: flex
+	flex-direction: column
+	align-items: center
+	list-style: none
+	padding: 0
+	padding-bottom: 85px
+	@media(max-width: 767px)
+		padding-bottom: 50px
+	&:before
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 50%
+		transform: translateX(-50%)
+		max-width: 340px
+		width: 100%
+		height: 12px
+		background-color: $c-orange
+		@media(max-width: 767px)
+			height: 6px
+	&:after
+		content: ''
+		position: absolute
+		bottom: -54px
+		left: -280px
+		width: 156px
+		height: 164px
+		background-image: url('../img/dec-cross-box.png')
+		@media(max-width: 1200px)
+		  left: -120px
+		@media(max-width: 991px)
+			display: none
+	&__image
+		@media(max-width: 991px)
+			width: 40%
+	&__list-item
+		&:first-child
+			margin-bottom: 47px
+		&:nth-child(2)
+			margin-bottom: 55px
+		&:nth-child(3), &:nth-child(4)
+			margin-bottom: 35px
+
+.quality-item
+	display: flex
+	align-items: center
+	@media(max-width: 767px)
+		flex-direction: column
+		&:nth-child(2), &:nth-child(4)
+			flex-direction: column-reverse
+	&__content
+		&--maw370
+			max-width: 375px
+			margin-left: 67px
+		&--maw435
+			max-width: 435px
+			margin-right: 59px
+		&--maw215
+			max-width: 215px
+			margin-left: 78px
+		&--maw345
+			max-width: 345px
+			margin-right: 170px
+		&--maw380
+			max-width: 380px
+			margin-left: 88px
+	&__title
+		font-family: $roboto
+		font-size: 26px
+		font-weight: 700
+		@media(max-width: 767px)
+			font-size: 24px
+		@media(max-width: 380px)
+			font-size: 22px
+	&__text
+		margin: 0
+		margin-top: 10px
+		font-family: $roboto
+		font-size: 22px
+		font-weight: 400
+		line-height: 28px
+		@media(max-width: 767px)
+			font-size: 18px
+		@media(max-width: 380px)
+			font-size: 16px
+			margin-top: 5px
+		&--bold
+			font-weight: 700
+	&__content
+		@media(max-width: 767px)
+			max-width: 100%
+			margin: 0
+			margin-top: 10px
+		
+// end - quality-list
+// end - quality-b
+// address-b
+.address-b
+	padding-top: 55px
+	@media(max-width: 991px)
+		padding-top: 25px
+	&__block-title
+		text-align: center
+		@media(max-width: 767px)
+			font-size: 20px
+	&__wrap
+		position: relative
+		width: 100%
+	&__map
+		margin-top: 40px
+		width: 100%
+		height: 730px
+		@media(max-width: 991px)
+			margin-top: 20px
+			height: 650px
+		@media(max-width: 767px)
+			height: 400px
+			margin-top: 0
+	&__feedback
+		position: absolute
+		top: 147px
+		right: 180px
+		@media(min-width: 1441px)
+			right: 29%
+		@media(max-width: 1200px)
+		  right: 70px
+		@media(max-width: 767px)
+			position: static
+			margin-top: 15px
+
+
+// feedback-b
+.feedback-b
+	max-width: 385px
+	width: 100%
+	padding-top: 45px
+	padding-bottom: 50px
+	background-color: $c-blue
+	box-shadow: 0 0 9px rgba(30, 15, 0, 0.89)
+	z-index: 100
+	form
+		width: 100%
+	@media(max-width: 991px)
+		max-width: 320px
+		padding-top: 30px
+		padding-bottom: 35px
+	@media(max-width: 767px)
+		max-width: 100%
+		width: 100%
+
+	&__wrap, &__wrap-inputs
+		width: 100%
+		display: flex
+		flex-direction: column
+		align-items: center
+	&__wrap-inputs
+		margin-top: 30px
+	&__title
+		text-align: center
+		max-width: 180px
+		font-family: $roboto
+		font-size: 30px
+		font-weight: 700
+		color: $c-fff
+		@media(max-width: 991px)
+			font-size: 26px
+	&__input
+		&:not(:first-child)
+			margin-top: 25px
+	&__button
+		margin-top: 35px
+// end - feedback-b
+// end - address-b
+
+// footer
+.footer
+	background-color: $c-orange
+	padding-top: 30px
+	padding-bottom: 45px
+	@media(max-width: 991px)
+		padding-bottom: 30px
+	@media(max-width: 767px)
+		padding-bottom: 15px
+		padding-bottom: 15px
+	&__wrap
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__contacts-b
+		max-width: 345px
+		width: 100%
+		@media(max-width: 767px)
+			flex-direction: column-reverse
+			.contacts-b__col
+				margin: 0
+			.contacts-b__button
+				margin-top: 10px
+				align-self: flex-end
+				height: 34px
+// end - footer
+
+@import "media" // Всегда в конце

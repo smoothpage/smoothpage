@@ -1,0 +1,90 @@
+@import "vars"
+
+.button
+	width: 100%
+	display: flex
+	align-items: center
+	justify-content: center
+	background-color: $c-green
+	font-size: 18px
+	font-weight: 700
+	font-variant: small-caps
+	color: $c-fff
+	transition: all .2s
+	border: 0
+	&:hover, &:focus
+		color: $c-fff
+		text-decoration: none
+		background-color: $c-green-focus
+		transition: all .2s
+	&--sm
+		max-width: 171px
+		height: 41px
+		border-radius: 17px
+	&--md
+		max-width: 198px
+		height: 49px
+		border-radius: 23px
+	&--lg
+		max-width: 255px
+		height: 63px
+		border-radius: 23px
+		font-size: 22px
+		@media(max-width: 991px)
+			height: 50px
+	&--fz26
+		font-size: 26px
+	&--arrow
+		position: relative
+		padding-right: 50px
+		&:before
+			content: ''
+			position: absolute
+			right: 14px
+			width: 26px
+			height: 26px
+			background-image: url('../img/doubleArrow-small.png')
+			background-repeat: no-repeat
+
+.input-theme
+	width: 100%
+	background-color: $c-fff
+	border: 1px solid $c-000
+	padding-left: 20px
+	font-size: 18px
+	&::placeholder
+		font-size: 18px
+		color: $c-000
+		font-weight: 400
+		opacity: 1
+		transition: all .2s
+	&:focus
+		outline: none
+		&::placeholder
+			transform: translateX(15px)
+			opacity: 0
+			transition: all .2s
+	&--sm
+		border-radius: 17px
+		max-width: 171px
+		height: 49px
+	&--md
+		max-width: 255px
+		height: 55px
+		border-radius: 17px
+		padding-left: 25px
+		font-size: 20px
+		@media(max-width: 991px)
+			height: 45px
+			font-size: 18px
+		&::placeholder
+			font-size: 20px
+			@media(max-width: 991px)
+				font-size: 18px
+
+	&--white
+		background-color: transparent
+		border: 1px solid $c-fff
+		color: $c-fff
+		&::placeholder
+			color: $c-fff
